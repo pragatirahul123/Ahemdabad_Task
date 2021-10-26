@@ -19,7 +19,7 @@ module.exports.login = async(req,res)=>{
             })
         }else{
             if(result.length >0){
-                console.log(result[0], "00000");
+                console.log(result[0]);
                 const plainPassword = req.body.password
                 const hashedPassword = result[0].Password
                
