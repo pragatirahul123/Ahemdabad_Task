@@ -14,7 +14,7 @@ module.exports = async(req, res, next) => {
         }else{
             token = req.headers.authorization;
         };''
-        const decoded = await jwt.verify(token, process.env.SERECTKEY);
+        const decoded = await jwt.verify(token, "pragati");
         req.tokenData = decoded;
         next(decoded)
     }catch(error){
